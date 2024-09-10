@@ -1,0 +1,14 @@
+name: Day Night Config Workflow
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # This cron expression triggers the workflow every minute
+    # - cron: '0 5,17 * * *'   # This cron expression triggers the workflow at 8:00 AM and 8:00 PM Cairo time
+
+jobs:
+  Test-Schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: shifting-configurations
+        run: |
+          echo Hello Scheduled
